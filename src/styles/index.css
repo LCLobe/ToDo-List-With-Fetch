@@ -39,10 +39,11 @@
     display: none;
     background-color: azure;
     border: none;
+    z-index: 3;
 }
 
-.task-wrapper:hover + .task-button {
-    display: block;
+.task-wrapper:hover .task-button {
+    display: unset;
     color: red;
 }
 
