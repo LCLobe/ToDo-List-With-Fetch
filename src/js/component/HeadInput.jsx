@@ -21,8 +21,8 @@ const HeadInput = ({onSet, onRandom})=>{
     }
 
     return (
-        <div>
-            <input type="text" value={inputValue} placeholder={"What needs to be done?"} onChange={handleChange} onKeyDown={pressEnter}/>
+        <div className="task-wrapper">
+            <input className="input" type="text" value={inputValue} placeholder={"What needs to be done?"} onChange={handleChange} onKeyDown={pressEnter}/>
         </div>
     )
 }

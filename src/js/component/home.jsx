@@ -26,7 +26,7 @@ const Home = () => {
 			</div>
 			<br></br>
 			<div className="footer">
-				<p className="footer-items">{todos.length ==0 ? "No tasks pending." : todos.length + " task"+ (todos.length >1 ? "s" : "") +" left."}</p>
+				<p className="footer-text">{todos.length ==0 ? "No tasks pending." : todos.length + " task"+ (todos.length >1 ? "s" : "") +" left."}</p>
 			</div>
 
 
