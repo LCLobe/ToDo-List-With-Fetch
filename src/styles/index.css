@@ -4,6 +4,7 @@
     border-style: solid;
     border-radius: 15px;
     border-color: aquamarine;
+    transform: skewX(-15deg);
 }
 
 .header-title {
@@ -35,16 +36,27 @@
     margin: 0%;
 }
 
+span.task-text {
+    z-index: -3;
+}
+
 .task-button {
-    display: none;
+    /*display: none;*/
     background-color: azure;
     border: none;
-    z-index: 3;
+    border-radius: 5px;
+}
+.task-button:hover {
+    color: rgb(12, 100, 189);
+}
+
+.task-button:active {
+background-color: rgb(188, 254, 254);;
+box-shadow: 3px 3px 5px rgb(84, 140, 135), -3px -3px 5px rgb(188, 254, 254);
 }
 
 .task-wrapper:hover .task-button {
     display: unset;
-    color: red;
 }
 
 .input {
@@ -58,4 +70,5 @@
     box-sizing: border-box;    
     background-color:rgb(230, 255, 255);
     border-color: azure;
+    transform: skewX(15deg);
 }
