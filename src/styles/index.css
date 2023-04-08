@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+
 .container {
     background-color: azure;
     width: 50%;
@@ -9,6 +12,7 @@
 
 .header-title {
     color: dodgerblue;
+    font-family: 'Kalam', cursive;
 }
 
 .footer {
@@ -18,6 +22,7 @@
 
 .footer-text {
     color: dodgerblue;
+    font-family: 'Kalam', cursive;
 }
 
 .task-wrapper {
@@ -34,6 +39,7 @@
 .task-text {
     color: dodgerblue;
     margin: 0%;
+    font-family: 'Kalam', cursive;
 }
 
 span.task-text {
@@ -71,4 +77,5 @@ box-shadow: 3px 3px 5px rgb(84, 140, 135), -3px -3px 5px rgb(188, 254, 254);
     background-color:rgb(230, 255, 255);
     border-color: azure;
     transform: skewX(15deg);
+    font-family: 'Kalam', cursive;
 }
