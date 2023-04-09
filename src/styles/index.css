@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
-
+body {
+    background-color: beige;
+}
 .container {
     background-color: azure;
     width: 50%;
@@ -8,6 +10,7 @@
     border-radius: 15px;
     border-color: aquamarine;
     transform: skewX(-15deg);
+    margin-top: 30px;
 }
 
 .header-title {
