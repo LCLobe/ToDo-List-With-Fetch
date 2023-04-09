@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import Task from "./Task.jsx";
 import HeadInput from "./HeadInput.jsx";
@@ -9,7 +9,33 @@ const randomNumber = () =>{
 
 const Home = () => {
 
-	const [todos, setTodos] = useState([{text: "task1", done: false, id:3.455454545 }, {text: "task2", done: false, id:5.455454545}]);
+
+	const USER = 'LCLobe';
+	const [todos, setTodos] = useState([]);
+
+	useEffect(()=>{
+		if (!todos.length) return
+		fetch('http://assets.breatheco.de/apis/fake/todos/user/'+USER, {
+			method: 'PUT',
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(todos)
+		})
+		.catch(e=>console.log(e))
+	},[todos])
+
+	useEffect(()=>{
+
+		fetch('http://assets.breatheco.de/apis/fake/todos/user/'+USER)
+		.then(res=>{
+			if (res.status ==  404 ) throw new Error(res.status)
+			console.log(res);
+			return res.json() })
+		.then(res=>{
+			setTodos(res)
+			console.log(res)
+		})
+		.catch(err=>console.log(err))
+	},[])
 
 	return (
 		<div className="container text-center">
@@ -17,10 +43,11 @@ const Home = () => {
 			<div>
 				<HeadInput onSet={setTodos} onRandom={randomNumber}/>
 				
-				{
+				{todos.length ?
 					todos.map((element, index)=>{
 						return <Task task={element} todos={todos} onSet={setTodos} key={element.id}/>
 					})
+					: null
 				}
 
 			</div>

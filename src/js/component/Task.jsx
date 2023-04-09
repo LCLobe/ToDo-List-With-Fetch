@@ -15,7 +15,7 @@ const Task = ({task, todos, onSet})=>{
 
     return (
         <div className="task-wrapper" id={task.id}>
-            <p className="task-text">{task.text}</p>
+            <p className="task-text">{task.label}</p>
             <button className="task-button task-text" onClick={closeTask}>X</button>
         </div>
     )

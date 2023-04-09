@@ -7,7 +7,7 @@ const HeadInput = ({onSet, onRandom})=>{
     const pressEnter =(event)=>{
         if(event.key === 'Enter'){
             const myNewTask = {
-                text: inputValue,
+                label: inputValue,
                 done: false,
                 id: onRandom()
             };
